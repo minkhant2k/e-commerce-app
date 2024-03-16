@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:k_shop/constant/dimens.dart';
-import 'package:k_shop/util/themes/light&dark_theme/app_style.dart';
+import 'package:k_shop/utils/themes/light&dark_theme/app_style.dart';
 
 import '../../../constant/colors.dart';
 
@@ -52,7 +52,7 @@ class KTextFormFieldTheme {
     floatingLabelStyle: appStyle(
       k14FS,
       FontWeight.normal,
-      color: Colors.black.withOpacity(k08),
+      color: Colors.white.withOpacity(k08),
     ),
     border: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(k14SP),
@@ -64,7 +64,7 @@ class KTextFormFieldTheme {
     ),
     focusedBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(k14SP),
-      borderSide: const BorderSide(width: 1, color: Colors.black12),
+      borderSide: const BorderSide(width: 1, color: Colors.white12),
     ),
     errorBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(k14SP),

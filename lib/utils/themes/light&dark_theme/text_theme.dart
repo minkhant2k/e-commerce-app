@@ -24,7 +24,7 @@ class AppTextTheme {
     bodyLarge: appStyle(k14FS, FontWeight.w500, color: kTextColorForLightTheme),
     bodyMedium:
         appStyle(k14FS, FontWeight.normal, color: kTextColorForLightTheme),
-    bodySmall: appStyle(k14FS, FontWeight.w500, color: kTextColorForLightTheme),
+    bodySmall: appStyle(k12FS, FontWeight.w500, color: kTextColorForLightTheme),
     labelLarge:
         appStyle(k12FS, FontWeight.normal, color: kTextColorForLightTheme),
     labelMedium: appStyle(k12FS, FontWeight.normal,
@@ -46,7 +46,7 @@ class AppTextTheme {
     bodyLarge: appStyle(k14FS, FontWeight.w500, color: kTextColorForDarkTheme),
     bodyMedium:
         appStyle(k14FS, FontWeight.normal, color: kTextColorForDarkTheme),
-    bodySmall: appStyle(k14FS, FontWeight.w500, color: kTextColorForDarkTheme),
+    bodySmall: appStyle(k12FS, FontWeight.w500, color: kTextColorForDarkTheme),
     labelLarge:
         appStyle(k12FS, FontWeight.normal, color: kTextColorForDarkTheme),
     labelMedium: appStyle(k12FS, FontWeight.normal,

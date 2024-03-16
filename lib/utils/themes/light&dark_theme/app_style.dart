@@ -7,9 +7,9 @@ TextStyle appStyle(
   color = Colors.white,
   fontStyle = FontStyle.normal,
 }) =>
-    GoogleFonts.lato().copyWith(
+    GoogleFonts.poppins(
       fontSize: fs,
       fontWeight: fw,
       color: color,
       fontStyle: fontStyle,
-    );
+    ).copyWith();

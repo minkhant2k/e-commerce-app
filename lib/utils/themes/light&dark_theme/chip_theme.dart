@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:k_shop/util/themes/light&dark_theme/app_style.dart';
+import 'package:k_shop/utils/themes/light&dark_theme/app_style.dart';
 
 import '../../../constant/dimens.dart';
 

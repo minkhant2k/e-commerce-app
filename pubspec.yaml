@@ -37,7 +37,15 @@ dependencies:
   iconsax: ^0.0.8
   provider: ^6.1.1
   google_fonts: ^6.1.0
+  http: ^1.1.0
+  intl: ^0.18.1
+  logger: ^2.1.0
+  url_launcher: ^6.1.12
+  lottie: ^3.1.0
+  gap: ^3.0.1
+
   cupertino_icons: ^1.0.2
+  smooth_page_indicator: ^1.1.0
 
 dev_dependencies:
   flutter_test:
@@ -64,6 +72,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - images/
+    - animation/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

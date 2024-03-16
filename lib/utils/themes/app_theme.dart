@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:k_shop/util/themes/light&dark_theme/bottom_sheet_theme.dart';
-import 'package:k_shop/util/themes/light&dark_theme/check_box_theme.dart';
-import 'package:k_shop/util/themes/light&dark_theme/chip_theme.dart';
-import 'package:k_shop/util/themes/light&dark_theme/outlined_btn_theme.dart';
-import 'package:k_shop/util/themes/light&dark_theme/text_form_field_theme.dart';
+import 'package:k_shop/utils/themes/light&dark_theme/bottom_sheet_theme.dart';
+import 'package:k_shop/utils/themes/light&dark_theme/check_box_theme.dart';
+import 'package:k_shop/utils/themes/light&dark_theme/chip_theme.dart';
+import 'package:k_shop/utils/themes/light&dark_theme/outlined_btn_theme.dart';
+import 'package:k_shop/utils/themes/light&dark_theme/text_form_field_theme.dart';
 
 import 'light&dark_theme/app_bar_theme.dart';
 import 'light&dark_theme/elevated_btn_theme.dart';

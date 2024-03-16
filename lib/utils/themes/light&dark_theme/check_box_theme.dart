@@ -15,13 +15,15 @@ class KCheckBoxTheme {
         return Colors.black;
       }
     }),
-    fillColor: MaterialStateProperty.resolveWith((states) {
-      if (states.contains(MaterialState.selected)) {
-        return Colors.blue;
-      } else {
-        return Colors.transparent;
-      }
-    }),
+    fillColor: MaterialStateProperty.resolveWith(
+      (states) {
+        if (states.contains(MaterialState.selected)) {
+          return Colors.purple.shade200;
+        } else {
+          return Colors.transparent;
+        }
+      },
+    ),
   );
 
   ///   for dark
@@ -34,12 +36,14 @@ class KCheckBoxTheme {
         return Colors.black;
       }
     }),
-    fillColor: MaterialStateProperty.resolveWith((states) {
-      if (states.contains(MaterialState.selected)) {
-        return Colors.blue;
-      } else {
-        return Colors.transparent;
-      }
-    }),
+    fillColor: MaterialStateProperty.resolveWith(
+      (states) {
+        if (states.contains(MaterialState.selected)) {
+          return Colors.purple.shade200;
+        } else {
+          return Colors.transparent;
+        }
+      },
+    ),
   );
 }
