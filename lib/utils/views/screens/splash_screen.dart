@@ -1,10 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:k_shop/utils/pages/on_boarding_screen.dart';
+import 'package:k_shop/utils/views/screens/on_boarding_screen.dart';
 import 'package:lottie/lottie.dart';
 
-import '../../constant/image_path_constant.dart';
+import '../../../constant/path_constant.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -18,9 +18,12 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-      const Duration(milliseconds: 5000),
+      const Duration(milliseconds: 5200),
       () => Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (_) => const OnBoardingScreen())),
+        MaterialPageRoute(
+          builder: (_) => const OnBoardingScreen(),
+        ),
+      ),
     );
   }
 

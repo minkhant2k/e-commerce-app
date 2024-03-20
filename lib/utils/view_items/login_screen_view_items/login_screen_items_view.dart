@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:k_shop/widgets/welcome_animation_widget.dart';
 
 import 'package:k_shop/constant/dimens.dart';
-import 'package:k_shop/constant/image_path_constant.dart';
-import 'package:k_shop/constant/string.dart';
 import 'package:k_shop/utils/view_items/login_screen_view_items/login_screen_views.dart';
 
 class LoginScreenItemView extends StatelessWidget {
@@ -14,9 +11,9 @@ class LoginScreenItemView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    return const SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.only(
+        padding: EdgeInsets.only(
           top: kAppBarHeight,
           bottom: kDefaultSpace,
           left: kDefaultSpace,
@@ -25,18 +22,15 @@ class LoginScreenItemView extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const WelcomeAnimationWidget(
-              width: kLoginAnimation1Width,
-              height: kLoginAnimation1Height,
-              animationPath: kWelcomeAnimation1,
-            ),
-            Text(
-              kLoginText.toUpperCase(),
-              style: Theme.of(context).textTheme.titleLarge,
-              textAlign: TextAlign.center,
-            ),
-            const Gap(k30SP),
-            const Form(
+            ///animation session
+            LoginWelcomeAnimationView(),
+
+            ///login label session
+            LoginLabelTextView(),
+            Gap(k30SP),
+
+            /// login form session
+            Form(
               child: Column(
                 children: [
                   ///email session

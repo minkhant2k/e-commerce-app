@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:k_shop/utils/helper/extension.dart';
-import 'package:k_shop/utils/pages/login_screen.dart';
+import 'package:k_shop/utils/views/screens/login_screen.dart';
 
 class OnBoardingProvider extends ChangeNotifier {
   bool _isDispose = false;
@@ -19,7 +19,7 @@ class OnBoardingProvider extends ChangeNotifier {
 
   void nextPage(BuildContext context) {
     if (_index == 2) {
-      context.next(const LoginPage());
+      context.next(const LoginScreen());
     } else {
       _index += 1;
       // print("this is page index when click next btn $_index");

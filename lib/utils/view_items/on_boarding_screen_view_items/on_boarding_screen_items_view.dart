@@ -12,7 +12,7 @@ class OnBoardingScreenItemsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        ///page view
+        /// page view
         Selector<OnBoardingProvider, PageController>(
           selector: (_, notifier) => notifier.pageController,
           builder: (_, notifier, __) => OnBoardingPageView(

@@ -2,15 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:iconsax/iconsax.dart';
 
-import 'package:k_shop/constant/image_path_constant.dart';
+import 'package:k_shop/constant/path_constant.dart';
 import 'package:k_shop/constant/string.dart';
 import 'package:k_shop/widgets/divider_widget.dart';
 import 'package:k_shop/widgets/text_form_field_widget.dart';
-import 'package:k_shop/widgets/welcome_animation_widget.dart';
+import 'package:k_shop/widgets/animation_widget.dart';
 import '../../../constant/dimens.dart';
 import 'package:k_shop/utils/helper/extension.dart';
 
 import '../../../widgets/image_logo_widget.dart';
+import '../../views/screens/email_verfication_screen.dart';
 
 ///check box, Privacy and Terms Of Use Session
 class CheckBoxPPAndTOUView extends StatelessWidget {
@@ -186,7 +187,7 @@ class WelcomeAnimationView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Center(
-      child: WelcomeAnimationWidget(
+      child: AnimationWidget(
           width: kLoginAnimation2Width,
           height: kLoginAnimation2Height,
           animationPath: kWelcomeAnimation2),
@@ -205,7 +206,9 @@ class CreateAccountBtnView extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          context.next(const EmailVerifactionScreen());
+        },
         child: const Text("Create Account"),
       ),
     );

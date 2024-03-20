@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-class WelcomeAnimationWidget extends StatelessWidget {
+class AnimationWidget extends StatelessWidget {
   final double width, height;
   final String animationPath;
 
-  const WelcomeAnimationWidget(
+  const AnimationWidget(
       {super.key,
       required this.width,
       required this.height,
@@ -13,6 +13,10 @@ class WelcomeAnimationWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Lottie.asset(width: width, height: height, animationPath);
+    return Lottie.asset(
+      width: width,
+      height: height,
+      animationPath,
+    );
   }
 }

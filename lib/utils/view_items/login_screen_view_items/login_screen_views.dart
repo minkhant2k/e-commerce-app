@@ -3,10 +3,45 @@ import 'package:iconsax/iconsax.dart';
 
 import 'package:k_shop/constant/string.dart';
 import 'package:k_shop/providers/login_provider.dart';
+import 'package:k_shop/utils/helper/extension.dart';
 import 'package:k_shop/utils/helper/functions.dart';
-import 'package:k_shop/utils/pages/create_account_screen.dart';
+import 'package:k_shop/utils/views/screens/sign_up_screen.dart';
 import 'package:k_shop/widgets/text_form_field_widget.dart';
 import 'package:provider/provider.dart';
+import 'package:k_shop/constant/path_constant.dart';
+import 'package:k_shop/widgets/animation_widget.dart';
+import '../../../constant/dimens.dart';
+import '../../views/screens/forget_password_screen.dart';
+
+class LoginLabelTextView extends StatelessWidget {
+  const LoginLabelTextView({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      kLoginText.toUpperCase(),
+      style: Theme.of(context).textTheme.titleLarge,
+      textAlign: TextAlign.center,
+    );
+  }
+}
+
+class LoginWelcomeAnimationView extends StatelessWidget {
+  const LoginWelcomeAnimationView({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const AnimationWidget(
+      width: kLoginAnimation1Width,
+      height: kLoginAnimation1Height,
+      animationPath: kWelcomeAnimation1,
+    );
+  }
+}
 
 class RememberMeAndForgetPasswordView extends StatelessWidget {
   const RememberMeAndForgetPasswordView({
@@ -33,9 +68,11 @@ class RememberMeAndForgetPasswordView extends StatelessWidget {
               ],
             ),
 
-            ///forget password
+            ///forget password btn session
             TextButton(
-              onPressed: () {},
+              onPressed: () => context.next(
+                const ForgetPasswordScreen(),
+              ),
               child: const Text(kForgetPasswordText),
             ),
           ],
@@ -57,7 +94,7 @@ class CreateAccountBtnView extends StatelessWidget {
       // instance.createAccount();
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (_) => const CreateAccountScreen(),
+          builder: (_) => const SignUpScreen(),
         ),
       );
     }

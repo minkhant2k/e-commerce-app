@@ -1,10 +1,10 @@
 /// default Dimens
-const double kAppBarHeight = 35.0;
-const double kDefaultSpace = 20.0;
+const double kAppBarHeight = 50.0;
+const double kDefaultSpace = 24.0;
 const double kLoginAnimation1Width = 300.0;
 const double kLoginAnimation1Height = 300.0;
 const double kLoginAnimation2Width = 200.0;
-const double kLoginAnimation2Height = 150.0;
+const double kLoginAnimation2Height = 120.0;
 
 ///constant for font size
 const double k12FS = 12.0;

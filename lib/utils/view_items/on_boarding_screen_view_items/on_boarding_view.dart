@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:k_shop/constant/colors.dart';
 import 'package:k_shop/constant/dimens.dart';
-import 'package:k_shop/constant/image_path_constant.dart';
+import 'package:k_shop/constant/path_constant.dart';
 import 'package:k_shop/constant/string.dart';
 import 'package:k_shop/providers/on_boarding_provider.dart';
 

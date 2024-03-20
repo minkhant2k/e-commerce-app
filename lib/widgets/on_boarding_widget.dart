@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-import '../constant/image_path_constant.dart';
+import '../constant/path_constant.dart';
 import '../utils/helper/functions.dart';
 
 class OnBoardingWidget extends StatelessWidget {

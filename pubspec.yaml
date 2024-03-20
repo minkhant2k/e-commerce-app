@@ -43,7 +43,7 @@ dependencies:
   url_launcher: ^6.1.12
   lottie: ^3.1.0
   gap: ^3.0.1
-
+  flutter_native_splash: ^2.4.0
   cupertino_icons: ^1.0.2
   smooth_page_indicator: ^1.1.0
 
