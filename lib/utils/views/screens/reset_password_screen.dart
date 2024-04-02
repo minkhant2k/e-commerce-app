@@ -14,6 +14,7 @@ class ResetPasswordScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         actions: [
           CloseBtnWidget(
             onPressed: () => context.back(),
@@ -29,9 +30,12 @@ class ResetPasswordScreen extends StatelessWidget {
         btnText: kDoneText,
         onPressed: () {},
         widget: SizedBox(
-            width: double.infinity,
-            child:
-                TextButton(onPressed: () {}, child: const Text(kResendEmail))),
+          width: double.infinity,
+          child: TextButton(
+            onPressed: () {},
+            child: const Text(kResendEmail),
+          ),
+        ),
       ),
     );
   }

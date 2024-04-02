@@ -15,3 +15,9 @@ const kOnBoardingAnimation3 = 'images/img3.png';
 /// logo path
 const kFaceBookLogoPath = "images/facebook.png";
 const kGoogleLogoPath = "images/google.png";
+
+///home carousel image path
+const kCarouselImage1Path = "images/carousel_img1.jpg";
+const kCarouselImage2Path = "images/carousel_img2.jpg";
+const kCarouselImage3Path = "images/carousel_img3.jpg";
+const kCarouselImage4Path = "images/carousel_img4.jpg";

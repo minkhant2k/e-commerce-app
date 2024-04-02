@@ -61,3 +61,18 @@ const String kResetPasswordTitle = "Password Rest Email Sent";
 const String kResetPasswordSubtitle =
     "Your Account Security is Our Priority! We've Sent You a Secure to Safety Change Your Password ans Keep Your Account Protected.";
 const String kDoneText = "Done";
+
+/// bottom nav bar session
+const String kHomeText = "Home";
+const String kShopText = "Shop";
+const String kWishlistText = "Wishlist";
+const String kProfileText = "Profile";
+
+/// home page texts
+const String kAppBarTitleText = "Have A Nice Day";
+const String kUserName = "User Name";
+const String kHomeSearchText = "Search ";
+const String kFilterText = "Filter";
+const String kCategoriesText = "Categories";
+const String kNewArrivalText = "New Arrivals";
+const String kViewAllText = "View All";

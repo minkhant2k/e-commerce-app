@@ -84,6 +84,7 @@ class OnBoardingDotIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final darkMode = KHelperFunctions.isDarkMode(context);
     return Positioned(
       bottom: KHelperDeviceUtils.getBottomNavBarHeight() * 1.6,
       left: k22SP,
@@ -97,7 +98,7 @@ class OnBoardingDotIndicator extends StatelessWidget {
         effect: JumpingDotEffect(
           dotHeight: 12,
           dotWidth: 12,
-          dotColor: KHelperFunctions.isDarkMode(context) ? kLight : kDark,
+          dotColor: darkMode ? kDarkMode : kLightMode,
           activeDotColor: kDotIndicatorColor,
         ),
       ),
@@ -130,7 +131,7 @@ class OnBoardingNextBtnItemView extends StatelessWidget {
         child: Icon(
           Iconsax.arrow_right_3,
           size: k22IS,
-          color: isDarkMode ? kLight : kDark,
+          color: isDarkMode ? kDarkMode : kLightMode,
         ),
       ),
     );

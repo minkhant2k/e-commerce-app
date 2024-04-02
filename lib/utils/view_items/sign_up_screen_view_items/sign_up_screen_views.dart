@@ -10,7 +10,7 @@ import 'package:k_shop/widgets/animation_widget.dart';
 import '../../../constant/dimens.dart';
 import 'package:k_shop/utils/helper/extension.dart';
 
-import '../../../widgets/image_logo_widget.dart';
+import '../../../widgets/logo_image_widget.dart';
 import '../../views/screens/email_verfication_screen.dart';
 
 ///check box, Privacy and Terms Of Use Session
@@ -42,20 +42,18 @@ class CheckBoxPPAndTOUView extends StatelessWidget {
               TextSpan(
                 text: kPrivacyPolicyText,
                 style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                    decoration: TextDecoration.underline,
-                    decorationColor: Colors.white),
+                      fontWeight: FontWeight.bold,
+                      decoration: TextDecoration.underline,
+                    ),
               ),
               TextSpan(
                   text: kAndText, style: Theme.of(context).textTheme.bodySmall),
               TextSpan(
                 text: kTermsOfUseText,
                 style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                    decoration: TextDecoration.underline,
-                    decorationColor: Colors.white),
+                      fontWeight: FontWeight.bold,
+                      decoration: TextDecoration.underline,
+                    ),
               ),
             ],
           ),
@@ -188,8 +186,8 @@ class WelcomeAnimationView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Center(
       child: AnimationWidget(
-          width: kLoginAnimation2Width,
-          height: kLoginAnimation2Height,
+          width: kSignUpAnimationWidth,
+          height: kSignUpAnimationHeight,
           animationPath: kWelcomeAnimation2),
     );
   }
@@ -269,11 +267,11 @@ class FbAndGoogleLogoView extends StatelessWidget {
     return const Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        ImageLogoWidget(
+        LogoImageWidget(
           imageLogo: kFaceBookLogoPath,
         ),
         Gap(k50SP),
-        ImageLogoWidget(
+        LogoImageWidget(
           imageLogo: kGoogleLogoPath,
         ),
       ],

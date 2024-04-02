@@ -28,7 +28,7 @@ class AppTextTheme {
     labelLarge:
         appStyle(k12FS, FontWeight.normal, color: kTextColorForLightTheme),
     labelMedium: appStyle(k12FS, FontWeight.normal,
-        color: kTextColorForLightTheme.withOpacity(k05)),
+        color: kTextColorForLightTheme.withOpacity(k05ROE)),
   );
 
   ///for dark text theme
@@ -50,6 +50,6 @@ class AppTextTheme {
     labelLarge:
         appStyle(k12FS, FontWeight.normal, color: kTextColorForDarkTheme),
     labelMedium: appStyle(k12FS, FontWeight.normal,
-        color: kTextColorForDarkTheme.withOpacity(k05)),
+        color: kTextColorForDarkTheme.withOpacity(k05ROE)),
   );
 }

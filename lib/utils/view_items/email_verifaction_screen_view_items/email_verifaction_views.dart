@@ -97,7 +97,7 @@ class VerifyEmailAnimationView extends StatelessWidget {
     return Center(
       child: AnimationWidget(
         width: KHelperFunctions.screenWidth(context),
-        height: KHelperFunctions.screenHeight(context) * 0.4,
+        height: KHelperFunctions.screenHeight(context) * 0.35,
         animationPath: kEmailVerifactionAnimation,
       ),
     );

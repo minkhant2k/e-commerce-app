@@ -11,6 +11,8 @@ import 'light&dark_theme/text_theme.dart';
 
 class AppTheme {
   AppTheme._();
+  static final _singleton = AppTheme._();
+  factory AppTheme() => _singleton;
 
   /// for Light AppTheme
   static final ThemeData lightTheme = ThemeData(

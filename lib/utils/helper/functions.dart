@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 class KHelperFunctions {
   KHelperFunctions._();
+  static final _singleton = KHelperFunctions._();
+  factory KHelperFunctions() => _singleton;
 
   static void showSnackBar(BuildContext context, String message) {
     ScaffoldMessenger.of(context).showSnackBar(
@@ -29,6 +31,10 @@ class KHelperFunctions {
         );
       },
     );
+  }
+
+  static double getAppBarHeight() {
+    return kToolbarHeight;
   }
 
   static bool isDarkMode(BuildContext context) {

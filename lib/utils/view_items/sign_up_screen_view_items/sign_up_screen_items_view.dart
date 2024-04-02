@@ -20,6 +20,7 @@ class SignUpScreenItemsView extends StatelessWidget {
             top: kAppBarHeight,
             left: kDefaultSpace,
             right: kDefaultSpace,
+            bottom: kDefaultSpace,
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

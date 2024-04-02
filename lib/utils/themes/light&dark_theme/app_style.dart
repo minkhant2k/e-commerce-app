@@ -6,10 +6,12 @@ TextStyle appStyle(
   FontWeight fw, {
   color = Colors.white,
   fontStyle = FontStyle.normal,
+  TextOverflow textOverflow = TextOverflow.ellipsis,
 }) =>
-    GoogleFonts.poppins(
+    GoogleFonts.poppins().copyWith(
       fontSize: fs,
       fontWeight: fw,
       color: color,
       fontStyle: fontStyle,
-    ).copyWith();
+      overflow: textOverflow,
+    );

@@ -11,6 +11,7 @@ import 'package:provider/provider.dart';
 import 'package:k_shop/constant/path_constant.dart';
 import 'package:k_shop/widgets/animation_widget.dart';
 import '../../../constant/dimens.dart';
+import '../../views/screens/main_screen.dart';
 import '../../views/screens/forget_password_screen.dart';
 
 class LoginLabelTextView extends StatelessWidget {
@@ -129,7 +130,9 @@ class LoginBtnView extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () => context.next(
+          const MainScreen(),
+        ),
         child: const Text(kLoginText),
       ),
     );

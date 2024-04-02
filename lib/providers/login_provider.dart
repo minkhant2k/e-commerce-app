@@ -12,7 +12,7 @@ class LoginProvider extends ChangeNotifier {
   }
 
   void createAccount() {
-    startScreen = "create_account";
+    startScreen = "sign_up_screen";
     notifyListeners();
   }
 

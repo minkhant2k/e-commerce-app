@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:k_shop/constant/colors.dart';
 import 'package:k_shop/constant/dimens.dart';
 import 'package:k_shop/utils/helper/functions.dart';
 
@@ -19,7 +20,7 @@ class DividerWidget extends StatelessWidget {
       children: [
         Flexible(
           child: Divider(
-            color: darkMode ? Colors.grey.shade300 : Colors.white54,
+            color: darkMode ? kDividerDarkMode : kDividerLightMode,
             thickness: kDividerThickness,
             indent: isSignUp ? kDividerMaxIndent : kDividerDefaultMaxIndent,
             endIndent: kDividerDefaultIndent,
@@ -31,7 +32,7 @@ class DividerWidget extends StatelessWidget {
         ),
         Flexible(
           child: Divider(
-            color: darkMode ? Colors.grey.shade300 : Colors.white54,
+            color: darkMode ? kDividerDarkMode : kDividerLightMode,
             thickness: kDividerThickness,
             indent: kDividerDefaultIndent,
             endIndent:

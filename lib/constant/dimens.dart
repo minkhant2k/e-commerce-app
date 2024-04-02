@@ -1,10 +1,19 @@
 /// default Dimens
-const double kAppBarHeight = 50.0;
-const double kDefaultSpace = 24.0;
-const double kLoginAnimation1Width = 300.0;
-const double kLoginAnimation1Height = 300.0;
-const double kLoginAnimation2Width = 200.0;
-const double kLoginAnimation2Height = 120.0;
+const kAppBarHeight = 50.0;
+const kDefaultSpace = 24.0;
+const kDefaultPadding = 20.0;
+const kGridViewSpacing = 16.0;
+const kDefaultRadius = 16.0;
+const kHomePageHorizontalSpace = 18.0;
+const kLoginAnimation1Width = 250.0;
+const kLoginAnimation1Height = 200.0;
+const kSignUpAnimationWidth = 200.0;
+const kSignUpAnimationHeight = 120.0;
+const kCircularContainerRadius = 40.0;
+const kCarouselSliderImageHeight = 200.0;
+const kCartImageDefaultHeight = 140.0;
+const kCartDefaultWidth = 180.0;
+const kDefaultMaxLine = 2;
 
 ///constant for font size
 const double k12FS = 12.0;
@@ -15,8 +24,17 @@ const double k24FS = 24.0;
 const double k32FS = 32.0;
 
 ///constant for spacing and padding
+const double k00SP = 0.0;
+const double k03SP = 0.3;
+const double k04SP = 0.4;
+const double k05SP = 0.5;
+const double k1SP = 1.0;
+const double k2SP = 2.0;
+const double k3SP = 3.0;
 const double k4SP = 4.0;
 const double k5SP = 5.0;
+const double k6SP = 6.0;
+const double k8SP = 8.0;
 const double k10SP = 10.0;
 const double k12SP = 12.0;
 const double k14SP = 14.0;
@@ -27,18 +45,29 @@ const double k20SP = 20.0;
 const double k22SP = 22.0;
 const double k25SP = 25.0;
 const double k30SP = 30.0;
+const double k35SP = 35.0;
 const double k40SP = 40.0;
 const double k50SP = 50.0;
+const double k60SP = 60.0;
+const double k100SP = 100.0;
+const double k170SP = 170.0;
 
-///constant for opacity
-const double k05 = 0.5;
-const double k04 = 0.4;
-const double k08 = 0.8;
-const double k09 = 0.9;
+///constant for radius, opacity and elevation
+const double k00ROE = 0.0;
+const double k01ROE = 0.1;
+const double k04ROE = 0.4;
+const double k05ROE = 0.5;
+const double k08ROE = 0.8;
+const double k09ROE = 0.9;
+const double k5ROE = 5.0;
+
+const double k12ROE = 12.0;
 
 ///constant for icon size
+const double k14IS = 14.0;
 const double k24IS = 24.0;
 const double k22IS = 22.0;
+const double k28IS = 28.0;
 const double k35IS = 35.0;
 
 ///constant for divider

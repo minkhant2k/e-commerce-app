@@ -8,7 +8,7 @@ class KChipTheme {
 
   ///for light
   static final lightChipTheme = ChipThemeData(
-    disabledColor: Colors.grey.withOpacity(k04),
+    disabledColor: Colors.grey.withOpacity(k04ROE),
     labelStyle: appStyle(k14FS, FontWeight.normal, color: Colors.black),
     padding: const EdgeInsets.symmetric(horizontal: k12SP, vertical: k12SP),
     checkmarkColor: Colors.white,

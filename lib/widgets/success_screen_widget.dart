@@ -26,7 +26,7 @@ class SuccessScreenWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final width = KHelperFunctions.screenWidth(context);
-    final height = KHelperFunctions.screenHeight(context) * 0.4;
+    final height = KHelperFunctions.screenHeight(context) * 0.35;
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(

@@ -11,6 +11,7 @@ class ForgetPasswordScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         actions: [
           CloseBtnWidget(
             onPressed: () => context.back(),

@@ -17,7 +17,7 @@ class KTextFormFieldTheme {
     floatingLabelStyle: appStyle(
       k14FS,
       FontWeight.normal,
-      color: Colors.black.withOpacity(k08),
+      color: Colors.black.withOpacity(k08ROE),
     ),
     border: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(k14SP),
@@ -52,7 +52,7 @@ class KTextFormFieldTheme {
     floatingLabelStyle: appStyle(
       k14FS,
       FontWeight.normal,
-      color: Colors.white.withOpacity(k08),
+      color: Colors.white.withOpacity(k08ROE),
     ),
     border: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(k14SP),
