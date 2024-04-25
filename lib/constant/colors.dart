@@ -22,6 +22,7 @@ const Color kLightMode = Colors.black;
 const Color kFavoriteIconColor = Colors.red;
 final Color kDotIndicatorColor = Colors.purple.shade300;
 final Color kOnBoardingNextBtnColor = Colors.purple.shade200;
+final Color kCircularContainerBorderColor = Colors.grey.withOpacity(0.3);
 
 ///divider color
 final Color kDividerDarkMode = Colors.grey.shade300;
@@ -32,17 +33,21 @@ final Color kBotNavBarSelectItemColor = Colors.purple.shade300;
 final Color kBotNavBarUnselectItemColor = Colors.purple.shade100;
 
 //// color for home Page view
-final Color kCurveBgColor1DarkMode = Colors.purple.withOpacity(0.5);
-const Color kCurveBgColor1LightMode = Color.fromARGB(255, 115, 26, 131);
+final Color kPrimaryDarkColor = Colors.purple.withOpacity(0.5);
+final Color kTabLabelPrimaryDarkColor = Colors.purple.shade200.withOpacity(0.4);
+const Color kPrimaryLightColor = Color.fromARGB(255, 115, 26, 131);
+final Color kTabLabelPrimaryLightColor = Colors.purple.withOpacity(0.4);
 const Color kCurveBgColorDarkMode = Colors.white24;
 const Color kCurveBgColorLightMode = Colors.white54;
-const Color kCurveDarkMode = Colors.purple;
 final Color kCurveLightMode = Colors.purple.shade200.withOpacity(0.1);
 final Color kHomeAppBarTextDarkModeColor = Colors.purple.shade100;
 final Color kHomeAppBarTextLightModeColor = Colors.purple.shade700;
-final Color kHomeSearchBarDarkModeColor = Colors.purple.withOpacity(0.1);
-final Color kHomeSearchBarLightModeColor = Colors.purple.withOpacity(0.2);
+final Color kHomeSearchBarDarkModeColor = Colors.black87.withOpacity(0.6);
+final Color kHomeSearchBarLightModeColor = Colors.white70.withOpacity(0.5);
+final Color kHomeCategoryBgDarkModeColor = Colors.black87.withOpacity(0.6);
+final Color kHomeCategoryBgLightModeColor = Colors.white70.withOpacity(0.6);
 final Color kSearchHintTextDarkModeColor = Colors.grey.shade400;
-const Color kSearchHintTextModeModeColor = Colors.black54;
-const Color kSearchBorderDarkModeColor = Colors.grey;
-final Color kSearchBorderLightModeColor = Colors.purple.shade300;
+const Color kSearchHintTextLightModeColor = Colors.black54;
+final Color kSearchBorderDarkModeColor =
+    Colors.purple.shade100.withOpacity(0.4);
+final Color kSearchBorderLightModeColor = Colors.grey.shade400.withOpacity(0.4);

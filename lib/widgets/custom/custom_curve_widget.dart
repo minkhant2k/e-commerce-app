@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:k_shop/widgets/custom_clip_path_widget.dart';
+
+import 'custom_clip_path_widget.dart';
 
 class CustomCurveWidget extends StatelessWidget {
   const CustomCurveWidget({

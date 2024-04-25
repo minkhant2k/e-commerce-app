@@ -1,8 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:k_shop/utils/views/screens/on_boarding_screen.dart';
-import 'package:lottie/lottie.dart';
+import 'package:k_shop/utils/views/screens/main_screen.dart';
 
 import '../../../constant/path_constant.dart';
 
@@ -18,10 +17,10 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-      const Duration(milliseconds: 5200),
+      const Duration(seconds: 5),
       () => Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (_) => const OnBoardingScreen(),
+          builder: (_) => const MainScreen(),
         ),
       ),
     );
@@ -30,11 +29,14 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           /// splash animation session
-          Lottie.asset(kSplashAnimation),
+          Image.asset(
+            kSplashLogo,
+          ),
         ],
       ),
     );

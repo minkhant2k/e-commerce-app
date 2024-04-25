@@ -3,10 +3,11 @@ import 'package:gap/gap.dart';
 import 'package:k_shop/constant/colors.dart';
 import 'package:k_shop/utils/helper/functions.dart';
 
-import '../constant/dimens.dart';
+import '../../constant/dimens.dart';
 
 class SearchContainerWidget extends StatelessWidget {
   final double w;
+  final double? h;
   final bool showBgColor, showBorder;
   final String text;
   final IconData? icon;
@@ -17,6 +18,7 @@ class SearchContainerWidget extends StatelessWidget {
     this.showBorder = true,
     required this.text,
     this.icon,
+    this.h,
   });
 
   @override
@@ -24,6 +26,7 @@ class SearchContainerWidget extends StatelessWidget {
     final darkMode = KHelperFunctions.isDarkMode(context);
     return Container(
       width: w,
+      height: h,
       padding: const EdgeInsets.all(k12SP),
       decoration: BoxDecoration(
         color: showBgColor
@@ -41,6 +44,7 @@ class SearchContainerWidget extends StatelessWidget {
         ),
       ),
       child: Row(
+        mainAxisSize: MainAxisSize.min,
         children: [
           Icon(
             icon,
@@ -51,7 +55,7 @@ class SearchContainerWidget extends StatelessWidget {
             style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                   color: darkMode
                       ? kSearchHintTextDarkModeColor
-                      : kSearchHintTextModeModeColor,
+                      : kSearchHintTextLightModeColor,
                 ),
           )
         ],

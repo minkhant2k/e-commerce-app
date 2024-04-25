@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../constant/dimens.dart';
+import '../../constant/dimens.dart';
 
 class CircularImageWidget extends StatelessWidget {
   final String imagePath;
@@ -20,7 +20,7 @@ class CircularImageWidget extends StatelessWidget {
     this.isNetworkImage = false,
     this.fit = BoxFit.fill,
     this.borderRadius = kDefaultRadius,
-    this.bgColor = Colors.transparent,
+    this.bgColor = Colors.black12,
     this.applyRadius = true,
     this.border,
     this.onTap,

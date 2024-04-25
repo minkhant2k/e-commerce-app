@@ -1,16 +1,16 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:iconsax/iconsax.dart';
-import 'package:k_shop/widgets/cart_widget.dart';
-import 'package:k_shop/widgets/custom_grid_view_widget.dart';
+import 'package:k_shop/widgets/cart_and_categories/cart_widget.dart';
 import 'package:provider/provider.dart';
 
 import '../../../constant/dimens.dart';
 import '../../../constant/string.dart';
 import '../../../providers/home_page_provider.dart';
-import '../../../widgets/circular_img_widget.dart';
-import '../../../widgets/circular_container_widget.dart';
+import '../../../widgets/title_and_view_all_widget.dart';
+import '../../../widgets/circular/circular_img_widget.dart';
+import '../../../widgets/circular/circular_container_widget.dart';
+import '../../../widgets/custom/custom_grid_view_widget.dart';
 
 /// carousel slider and dot indicator session
 class CarouselSliderAndDotIndicatorView extends StatelessWidget {
@@ -59,10 +59,10 @@ class CarouselSliderImagesView extends StatelessWidget {
         onPageChanged: (index, _) => notifier.newIndex(index),
       ),
       items: [
-        for (int i = 0; i < notifier.images.length; i++)
+        for (int i = 0; i < notifier.carouselImages.length; i++)
           CircularImageWidget(
             fit: (i == 1 || i == 2) ? BoxFit.cover : BoxFit.fill,
-            imagePath: notifier.images[i],
+            imagePath: notifier.carouselImages[i],
           ),
       ],
     );
@@ -81,13 +81,14 @@ class DotIndicatorView extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        for (int i = 0; i < notifier.images.length; i++)
+        for (int i = 0; i < notifier.carouselImages.length; i++)
           CircularContainerWidget(
             margin: const EdgeInsets.only(right: k10SP),
             width: k10SP,
             height: k10SP,
             radius: k5ROE,
             bgColor: notifier.indicatorIndex == i ? Colors.purple : Colors.grey,
+            showBorder: false,
           )
       ],
     );
@@ -104,32 +105,15 @@ class CategoryAndCartView extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              kNewArrivalText,
-              style: Theme.of(context).textTheme.titleLarge,
-            ),
-            GestureDetector(
-              onTap: () {},
-              child: Row(
-                children: [
-                  Text(
-                    kViewAllText,
-                    style: Theme.of(context).textTheme.bodySmall,
-                  ),
-                  const Gap(k5SP),
-                  const Icon(Iconsax.arrow_right),
-                ],
-              ),
-            )
-          ],
+        const TitleAndViewAllWidget(
+          categoryText: kNewArrivalText,
         ),
         const Gap(15),
         CustomGridViewWidget(
           itemCount: 4,
-          itemBuilder: (_, index) => const CartWidget(),
+          itemBuilder: (_, index) => const CartWidget(
+            imagePadding: EdgeInsets.all(kDefaultPadding - 10),
+          ),
         ),
       ],
     );

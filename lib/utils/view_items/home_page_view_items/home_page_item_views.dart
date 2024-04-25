@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 
 import 'package:k_shop/constant/dimens.dart';
 import 'package:k_shop/utils/helper/functions.dart';
@@ -14,7 +15,7 @@ class HomePageItemsView extends StatelessWidget {
   Widget build(BuildContext context) {
     final w = KHelperFunctions.screenWidth(context);
     final h = KHelperFunctions.screenHeight(context);
-
+    // debugPrint(" this is home page screen height ===> $h");
     return SingleChildScrollView(
       child: Column(
         children: [
@@ -25,6 +26,7 @@ class HomePageItemsView extends StatelessWidget {
 
           // carousel slider view session
           const CarouselSliderAndDotIndicatorView(),
+          const Gap(k8SP),
 
           // category and cart grid view session
           const Padding(

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:k_shop/constant/colors.dart';
 
-import '../constant/dimens.dart';
-import '../utils/helper/functions.dart';
+import '../../constant/dimens.dart';
+import '../../utils/helper/functions.dart';
 
 class LogoImageWidget extends StatelessWidget {
   final String imageLogo;

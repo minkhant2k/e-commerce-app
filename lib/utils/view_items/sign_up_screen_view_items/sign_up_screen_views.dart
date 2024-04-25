@@ -10,7 +10,7 @@ import 'package:k_shop/widgets/animation_widget.dart';
 import '../../../constant/dimens.dart';
 import 'package:k_shop/utils/helper/extension.dart';
 
-import '../../../widgets/logo_image_widget.dart';
+import '../../../widgets/circular/logo_image_widget.dart';
 import '../../views/screens/email_verfication_screen.dart';
 
 ///check box, Privacy and Terms Of Use Session

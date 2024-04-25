@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:k_shop/constant/dimens.dart';
 
 import '../constant/path_constant.dart';
 import '../utils/helper/functions.dart';
@@ -39,6 +40,7 @@ class OnBoardingWidget extends StatelessWidget {
           Text(
             subTitle,
             textAlign: TextAlign.center,
+            maxLines: kDefaultMaxLine,
             style: Theme.of(context).textTheme.bodyMedium,
           ),
         ],

@@ -76,3 +76,8 @@ const String kFilterText = "Filter";
 const String kCategoriesText = "Categories";
 const String kNewArrivalText = "New Arrivals";
 const String kViewAllText = "View All";
+
+/// store page texts
+const kStoreText = "Store";
+const kSearchInStoreText = "Search in Store";
+const kBrandsText = "Popular Brands";

@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:badges/badges.dart' as badges;
+import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 import 'package:gap/gap.dart';
 import 'package:iconsax/iconsax.dart';
 
 import 'package:k_shop/constant/colors.dart';
 import 'package:k_shop/constant/dimens.dart';
+import 'package:k_shop/providers/home_page_provider.dart';
 import 'package:k_shop/utils/helper/functions.dart';
-import 'package:k_shop/widgets/custom_curve_widget.dart';
+import 'package:k_shop/widgets/custom/custom_curve_widget.dart';
+import 'package:provider/provider.dart';
 
 import '../../../constant/string.dart';
-import '../../../widgets/category_widget.dart';
-import '../../../widgets/custom_app_bar_widget.dart';
-import '../../../widgets/search_container_widget.dart';
+import '../../../widgets/cart_and_categories/category_widget.dart';
+import '../../../widgets/custom/custom_app_bar_widget.dart';
+import '../../../widgets/circular/search_container_widget.dart';
+import '../../../widgets/shop_icon_widget.dart';
 
 class HomePageTopView extends StatelessWidget {
   const HomePageTopView({
@@ -63,12 +66,12 @@ class CurveView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final darkMode = KHelperFunctions.isDarkMode(context);
-    final curveHeight = h * k04SP;
+    final curveHeight = h <= kDefaultScreenHeight ? h * k05SP : h * k04SP;
     return CustomCurveWidget(
       child: Container(
         height: curveHeight,
         width: w,
-        color: darkMode ? kCurveBgColor1DarkMode : kCurveBgColor1LightMode,
+        color: darkMode ? kPrimaryDarkColor : kPrimaryLightColor,
         padding: EdgeInsets.zero,
         child: Stack(
           children: [
@@ -114,77 +117,49 @@ class HomeAppBarView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final darkMode = KHelperFunctions.isDarkMode(context);
     return Padding(
-      padding: const EdgeInsets.only(top: k05SP, left: k6SP, right: k12SP),
-      child: CustomAppBarWidget(
-        titleWidget: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              kAppBarTitleText,
-              style: Theme.of(context).textTheme.labelMedium!.copyWith(
-                    color: darkMode
-                        ? kHomeAppBarTextDarkModeColor
-                        : kHomeAppBarTextLightModeColor,
-                  ),
+      padding: const EdgeInsets.only(top: k05SP, right: k12SP),
+      child: Selector<HomePageProvider, AdvancedDrawerController>(
+        selector: (_, notifier) => notifier.drawerController,
+        builder: (_, controller, __) {
+          return CustomAppBarWidget(
+            titleWidget: IconButton(
+              icon: const Icon(Iconsax.menu4),
+              onPressed: () {
+                final instance = context.read<HomePageProvider>();
+                instance.openDrawer();
+              },
             ),
-            Text(
-              kUserName,
-              style: Theme.of(context).textTheme.headlineSmall!.copyWith(
-                    color: darkMode
-                        ? Colors.purple.shade100
-                        : kHomeAppBarTextLightModeColor,
-                  ),
-            )
-          ],
-        ),
-        actions: const [
-          ShopIconView(),
-        ],
+            actions: const [
+              ShopIconWithBadgeWidget(),
+            ],
+          );
+        },
       ),
     );
   }
 }
-
-class ShopIconView extends StatelessWidget {
-  const ShopIconView({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return badges.Badge(
-      position: badges.BadgePosition.topEnd(top: -4, end: 1),
-      showBadge: true,
-      badgeContent: Text(
-        '2',
-        style: Theme.of(context)
-            .textTheme
-            .labelLarge!
-            .copyWith(color: Colors.white),
-      ),
-      badgeAnimation: const badges.BadgeAnimation.scale(
-        animationDuration: Duration(seconds: 1),
-        colorChangeAnimationDuration: Duration(seconds: 1),
-        loopAnimation: false,
-        curve: Curves.fastOutSlowIn,
-        colorChangeAnimationCurve: Curves.easeInCubic,
-      ),
-      badgeStyle: badges.BadgeStyle(
-        shape: badges.BadgeShape.circle,
-        badgeColor: Colors.black,
-        padding: const EdgeInsets.all(5),
-        borderRadius: BorderRadius.circular(5),
-        elevation: 0,
-      ),
-      child: IconButton(
-        onPressed: () {},
-        icon: const Icon(Iconsax.shopping_bag),
-      ),
-    );
-  }
-}
+//Column(
+//           crossAxisAlignment: CrossAxisAlignment.start,
+//           children: [
+//             Text(
+//               kAppBarTitleText,
+//               style: Theme.of(context).textTheme.labelMedium!.copyWith(
+//                     color: darkMode
+//                         ? kHomeAppBarTextDarkModeColor
+//                         : kHomeAppBarTextLightModeColor,
+//                   ),
+//             ),
+//             Text(
+//               kUserName,
+//               style: Theme.of(context).textTheme.headlineSmall!.copyWith(
+//                     color: darkMode
+//                         ? Colors.purple.shade100
+//                         : kHomeAppBarTextLightModeColor,
+//                   ),
+//             )
+//           ],
+//         )
 
 /// search bar and filter session
 class SearchBarAndFilterView extends StatelessWidget {
@@ -275,20 +250,35 @@ class CategoriesListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: k60SP,
-      child: ListView.builder(
-        shrinkWrap: true,
-        itemCount: 10,
-        padding: const EdgeInsets.symmetric(vertical: k5SP, horizontal: k10SP),
-        scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) {
-          return GestureDetector(
-            onTap: () {},
-            child: const CategoryWidget(),
+    final darkMode = KHelperFunctions.isDarkMode(context);
+    return Selector<HomePageProvider, List<String>>(
+        selector: (_, notifier) => notifier.categories,
+        builder: (_, categories, __) {
+          return SizedBox(
+            height: k60SP,
+            child: ListView.builder(
+              shrinkWrap: true,
+              itemCount: categories.length,
+              padding:
+                  const EdgeInsets.symmetric(vertical: k5SP, horizontal: k10SP),
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (_, index) {
+                return GestureDetector(
+                  onTap: () {},
+                  child: CategoryWidget(
+                    width: kCategoryWidth,
+                    categoryName: categories[index],
+                    backgroundColor: darkMode
+                        ? kHomeCategoryBgDarkModeColor
+                        : kHomeCategoryBgLightModeColor,
+                    margin: const EdgeInsets.symmetric(
+                        horizontal: k8SP, vertical: k5SP),
+                    padding: const EdgeInsets.symmetric(horizontal: k10SP),
+                  ),
+                );
+              },
+            ),
           );
-        },
-      ),
-    );
+        });
   }
 }

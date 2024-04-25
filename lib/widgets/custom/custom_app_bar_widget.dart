@@ -7,7 +7,8 @@ import 'package:k_shop/utils/helper/functions.dart';
 class CustomAppBarWidget extends StatelessWidget
     implements PreferredSizeWidget {
   final Widget? titleWidget;
-  final bool showBackArrow;
+  final bool showBackArrow, centerTitle;
+  final double? leadingWidth;
   final List<Widget>? actions;
   final Function()? onPressed;
   final IconData? leadingIcon;
@@ -19,6 +20,8 @@ class CustomAppBarWidget extends StatelessWidget
     this.actions,
     this.onPressed,
     this.leadingIcon,
+    this.centerTitle = false,
+    this.leadingWidth = k00SP,
   });
 
   @override
@@ -34,8 +37,8 @@ class CustomAppBarWidget extends StatelessWidget
               onPressed: onPressed,
               icon: Icon(leadingIcon),
             ),
-      centerTitle: false,
-      leadingWidth: k00SP,
+      centerTitle: centerTitle,
+      leadingWidth: leadingWidth,
       title: titleWidget,
       actions: actions,
     );

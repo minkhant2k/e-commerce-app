@@ -10,8 +10,9 @@ class EasyTextWidget extends StatelessWidget {
     this.fw,
     this.textAlign = TextAlign.center,
     this.maxLine,
+    this.overflow,
   });
-
+  final TextOverflow? overflow;
   final String text;
   final Color? color;
   final double? fs;
@@ -24,6 +25,7 @@ class EasyTextWidget extends StatelessWidget {
     return Text(
       text,
       textAlign: textAlign,
+      overflow: overflow,
       maxLines: maxLine,
       style: appStyle(
         fs ?? 14,

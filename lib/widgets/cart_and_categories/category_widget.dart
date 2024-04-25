@@ -1,43 +1,49 @@
 import 'package:flutter/material.dart';
-
-import '../constant/dimens.dart';
-import '../utils/helper/functions.dart';
+import '../../constant/dimens.dart';
 
 class CategoryWidget extends StatelessWidget {
+  final double? height, width;
+  final EdgeInsetsGeometry? margin, padding;
+  final String categoryName;
+  final Color backgroundColor;
   const CategoryWidget({
     super.key,
+    this.height,
+    this.width,
+    this.categoryName = "default",
+    this.margin,
+    this.padding,
+    required this.backgroundColor,
   });
 
   @override
   Widget build(BuildContext context) {
-    final darkMode = KHelperFunctions.isDarkMode(context);
+    // final darkMode = KHelperFunctions.isDarkMode(context);
     return Container(
+      height: height,
+      width: width,
       alignment: Alignment.center,
-      padding: const EdgeInsets.symmetric(horizontal: k10SP),
-      margin: const EdgeInsets.symmetric(horizontal: k8SP, vertical: k5SP),
+      padding: padding,
+      margin: margin,
       decoration: BoxDecoration(
-        color: darkMode ? Colors.black54 : Colors.white54,
+        color: backgroundColor,
         borderRadius: BorderRadius.circular(k20SP),
         boxShadow: const [
           BoxShadow(
             color: Colors.black12,
-            blurRadius: 4,
+            blurRadius: 6,
             spreadRadius: 2,
             offset: Offset(1, 1.5),
           ),
           BoxShadow(
             color: Colors.white10,
-            blurRadius: 4,
+            blurRadius: 10,
             spreadRadius: 2,
             offset: Offset(-1, -2),
           ),
         ],
       ),
-      child: const Text(
-        "sub category",
-        maxLines: 1,
-        overflow: TextOverflow.ellipsis,
-      ),
+      child: Text(categoryName, style: Theme.of(context).textTheme.labelLarge),
     );
   }
 }

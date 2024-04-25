@@ -48,6 +48,9 @@ dependencies:
   smooth_page_indicator: ^1.1.0
   carousel_slider: ^4.2.1
   badges: ^3.1.2
+  flutter_advanced_drawer: ^1.3.6
+
+
 
 dev_dependencies:
   flutter_test:
@@ -74,6 +77,9 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - images/
+    - images/logo/
+    - images/on_boarding/
+    - images/products/nike_products/
     - animation/
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -101,3 +107,14 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+flutter_native_splash:
+  image: images/splash/splash_logo.png
+  color: "#000000"
+
+  android_12:
+    image: images/splash/splash_logo.png
+    color: "#000000"
+
+  android: true
+  ios: true
+  web: false

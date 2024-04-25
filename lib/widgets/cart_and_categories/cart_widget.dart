@@ -5,18 +5,24 @@ import 'package:k_shop/constant/colors.dart';
 import 'package:k_shop/constant/dimens.dart';
 import 'package:k_shop/constant/path_constant.dart';
 import 'package:k_shop/utils/helper/functions.dart';
-import 'package:k_shop/widgets/circular_container_widget.dart';
-import 'package:k_shop/widgets/circular_img_widget.dart';
+import 'package:k_shop/widgets/circular/circular_container_widget.dart';
+import 'package:k_shop/widgets/circular/circular_img_widget.dart';
 import 'package:k_shop/widgets/easy_text_widget.dart';
+
+import '../brand/brand_name_with_verify_icon_widget.dart';
 
 class CartWidget extends StatelessWidget {
   final double? imageHeight;
   final bool? isDiscount;
+  final String imageUrl;
+  final EdgeInsetsGeometry? imagePadding;
 
   const CartWidget({
     super.key,
     this.imageHeight,
     this.isDiscount,
+    this.imageUrl = kNikeSportImg2Path,
+    this.imagePadding,
   });
 
   @override
@@ -37,8 +43,9 @@ class CartWidget extends StatelessWidget {
             children: [
               /// product image view
               CircularImageWidget(
+                padding: imagePadding,
                 height: imageHeight ?? kCartImageDefaultHeight,
-                imagePath: kCarouselImage3Path,
+                imagePath: imageUrl,
                 fit: BoxFit.fill,
               ),
 
@@ -49,6 +56,7 @@ class CartWidget extends StatelessWidget {
                   top: 10,
                   left: 5,
                   child: CircularContainerWidget(
+                    showBorder: false,
                     radius: kDefaultRadius - k6SP,
                     padding: EdgeInsets.all(k6SP),
                     bgColor: Colors.green,
@@ -76,34 +84,20 @@ class CartWidget extends StatelessWidget {
           /// bottom view
 
           // product name and Brand session
-          Padding(
-            padding: const EdgeInsets.only(left: k5SP, top: k5SP, right: k5SP),
+          const Padding(
+            padding: EdgeInsets.only(left: k5SP, top: k8SP, right: k5SP),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const EasyTextWidget(
+                EasyTextWidget(
                   text: "shoe name",
                   maxLine: kDefaultMaxLine,
                   fs: k12FS,
                 ),
-                const Gap(k5SP),
-                Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    EasyTextWidget(
-                      text: "Nike",
-                      color: Colors.grey.shade600,
-                      maxLine: kDefaultMaxLine - 1,
-                      fs: k12FS,
-                    ),
-                    const Gap(k3SP),
-                    Icon(
-                      Iconsax.verify5,
-                      size: k14IS,
-                      color: Colors.blue.shade800,
-                    )
-                  ],
+                Gap(k5SP),
+                BrandNameWithVerifyIconWidget(
+                  brandName: "Nike",
                 ),
               ],
             ),
@@ -112,7 +106,9 @@ class CartWidget extends StatelessWidget {
 
           /// price and add to cart session
           Padding(
-            padding: const EdgeInsets.only(left: k5SP),
+            padding: const EdgeInsets.only(
+              left: k5SP,
+            ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -125,6 +121,7 @@ class CartWidget extends StatelessWidget {
                 GestureDetector(
                   onTap: () {},
                   child: const CircularContainerWidget(
+                    showBorder: false,
                     width: k35SP,
                     height: k35SP,
                     radius: k12ROE,
