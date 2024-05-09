@@ -19,8 +19,9 @@ const kCartImageDefaultHeight = 140.0;
 const kCartDefaultWidth = 180.0;
 const kDefaultMaxLine = 2;
 const kCategoryWidgetDefaultWidth = 200.0;
-const kProfileImageWidth = 150.0;
-const kProfileImageHeight = 150.0;
+const kProfileImageWidth = 140.0;
+const kProfileImageHeight = 140.0;
+const kUserInfoTextDefaultWidth = 150.0;
 
 ///constant for font size
 const double k12FS = 12.0;
@@ -37,7 +38,9 @@ const EdgeInsets kDefaultPaddingForShopPage = EdgeInsets.symmetric(
 );
 const double k00SP = 0.0;
 const double k03SP = 0.3;
+const double k036SP = 0.36;
 const double k04SP = 0.4;
+const double k045SP = 0.45;
 const double k05SP = 0.5;
 const double k1SP = 1.0;
 const double k2SP = 2.0;
@@ -48,6 +51,7 @@ const double k6SP = 6.0;
 const double k8SP = 8.0;
 const double k10SP = 10.0;
 const double k12SP = 12.0;
+const double k13SP = 13.0;
 const double k14SP = 14.0;
 const double k15SP = 15.0;
 const double k16SP = 16.0;
@@ -63,12 +67,16 @@ const double k60SP = 60.0;
 const double k70SP = 70.0;
 const double k80SP = 80.0;
 const double k100SP = 100.0;
+const double k120SP = 120.0;
 const double k150SP = 150.0;
 const double k170SP = 170.0;
 
 ///constant for radius, opacity and elevation
 const double k00ROE = 0.0;
+const double k005ROE = 0.05;
 const double k01ROE = 0.1;
+
+const double k02ROE = 0.2;
 const double k04ROE = 0.4;
 const double k05ROE = 0.5;
 const double k08ROE = 0.8;

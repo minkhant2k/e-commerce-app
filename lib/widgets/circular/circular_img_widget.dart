@@ -12,6 +12,7 @@ class CircularImageWidget extends StatelessWidget {
   final Color bgColor;
   final void Function()? onTap;
   final EdgeInsetsGeometry? padding;
+  final List<BoxShadow>? boxShadow;
 
   const CircularImageWidget({
     super.key,
@@ -25,7 +26,7 @@ class CircularImageWidget extends StatelessWidget {
     this.border,
     this.onTap,
     this.padding,
-    required this.imagePath,
+    required this.imagePath, this.boxShadow,
   });
 
   @override
@@ -39,6 +40,7 @@ class CircularImageWidget extends StatelessWidget {
         decoration: BoxDecoration(
           color: bgColor,
           border: border,
+          boxShadow: boxShadow,
           borderRadius: BorderRadius.circular(borderRadius),
         ),
         child: ClipRRect(

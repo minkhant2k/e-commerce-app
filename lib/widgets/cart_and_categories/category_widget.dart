@@ -28,20 +28,20 @@ class CategoryWidget extends StatelessWidget {
       decoration: BoxDecoration(
         color: backgroundColor,
         borderRadius: BorderRadius.circular(k20SP),
-        boxShadow: const [
-          BoxShadow(
-            color: Colors.black12,
-            blurRadius: 6,
-            spreadRadius: 2,
-            offset: Offset(1, 1.5),
-          ),
-          BoxShadow(
-            color: Colors.white10,
-            blurRadius: 10,
-            spreadRadius: 2,
-            offset: Offset(-1, -2),
-          ),
-        ],
+        // boxShadow: const [
+        //   BoxShadow(
+        //     color: Colors.black12,
+        //     blurRadius: 6,
+        //     spreadRadius: 2,
+        //     offset: Offset(1, 1.5),
+        //   ),
+        //   BoxShadow(
+        //     color: Colors.white10,
+        //     blurRadius: 10,
+        //     spreadRadius: 2,
+        //     offset: Offset(-1, -2),
+        //   ),
+        // ],
       ),
       child: Text(categoryName, style: Theme.of(context).textTheme.labelLarge),
     );

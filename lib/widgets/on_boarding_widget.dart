@@ -31,12 +31,12 @@ class OnBoardingWidget extends StatelessWidget {
                   : Colors.black,
             ),
           ),
-          const Gap(20),
+          const Gap(k20SP),
           Text(
             title,
             style: Theme.of(context).textTheme.headlineMedium,
           ),
-          const Gap(20),
+          const Gap(k20SP),
           Text(
             subTitle,
             textAlign: TextAlign.center,

@@ -7,7 +7,7 @@ class CustomClipPathWidget extends CustomClipper<Path> {
     path.lineTo(0, size.height - 50);
 
     final firstCurve = Offset(0, size.height - 25);
-    final lastCurve = Offset(30, size.height - 25);
+    final lastCurve = Offset(35, size.height - 25);
     path.quadraticBezierTo(
       firstCurve.dx,
       firstCurve.dy,
@@ -16,7 +16,7 @@ class CustomClipPathWidget extends CustomClipper<Path> {
     );
 
     final secondFirstCurve = Offset(0, size.height - 25);
-    final secondLastCurve = Offset(size.width - 30, size.height - 25);
+    final secondLastCurve = Offset(size.width - 35, size.height - 25);
     path.quadraticBezierTo(
       secondFirstCurve.dx,
       secondFirstCurve.dy,

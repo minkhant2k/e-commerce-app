@@ -33,12 +33,13 @@ final Color kBotNavBarSelectItemColor = Colors.purple.shade300;
 final Color kBotNavBarUnselectItemColor = Colors.purple.shade100;
 
 //// color for home Page view
-final Color kPrimaryDarkColor = Colors.purple.withOpacity(0.5);
+final Color kPrimaryDarkColor = Colors.purple.shade500.withOpacity(0.6);
+final Color kPrimaryLightColor = Colors.purple.shade300.withOpacity(0.3);
 final Color kTabLabelPrimaryDarkColor = Colors.purple.shade200.withOpacity(0.4);
-const Color kPrimaryLightColor = Color.fromARGB(255, 115, 26, 131);
-final Color kTabLabelPrimaryLightColor = Colors.purple.withOpacity(0.4);
-const Color kCurveBgColorDarkMode = Colors.white24;
-const Color kCurveBgColorLightMode = Colors.white54;
+
+final Color kTabLabelPrimaryLightColor = Colors.purple.withOpacity(0.2);
+const Color kCurveBgColorDarkMode = Colors.white70;
+const Color kCurveBgColorLightMode = Colors.white70;
 final Color kCurveLightMode = Colors.purple.shade200.withOpacity(0.1);
 final Color kHomeAppBarTextDarkModeColor = Colors.purple.shade100;
 final Color kHomeAppBarTextLightModeColor = Colors.purple.shade700;

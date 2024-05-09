@@ -28,12 +28,11 @@ class CartWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final darkMode = KHelperFunctions.isDarkMode(context);
-    return Container(
-      padding: const EdgeInsets.all(k2SP),
-      decoration: BoxDecoration(
-        color: darkMode ? Colors.white10 : Colors.black12.withOpacity(k01ROE),
-        borderRadius: BorderRadius.circular(kDefaultRadius),
-      ),
+    return CircularContainerWidget(
+      padding: const EdgeInsets.all(k1SP),
+      bgColor: darkMode ? Colors.white10 : Colors.black12.withOpacity(k01ROE),
+      radius: kDefaultRadius,
+      showBorder: false,
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -106,9 +105,8 @@ class CartWidget extends StatelessWidget {
 
           /// price and add to cart session
           Padding(
-            padding: const EdgeInsets.only(
-              left: k5SP,
-            ),
+            padding:
+                const EdgeInsets.only(left: k5SP, right: k1SP, bottom: k1SP),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

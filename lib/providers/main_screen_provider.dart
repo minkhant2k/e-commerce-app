@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'package:k_shop/utils/views/pages/profile_page.dart';
-import 'package:k_shop/utils/views/pages/shop_page.dart';
-import 'package:k_shop/utils/views/pages/wish_list_page.dart';
-import '../utils/views/pages/home_page.dart';
+import '../utils/ui/views/pages/home_page.dart';
+import '../utils/ui/views/pages/profile_page.dart';
+import '../utils/ui/views/pages/shop_page.dart';
+import '../utils/ui/views/pages/wish_list_page.dart';
+
+
 
 class MainScreenProvider extends ChangeNotifier {
   bool _isDispose = false;
@@ -11,7 +13,7 @@ class MainScreenProvider extends ChangeNotifier {
   final List<Widget> pages = [
     const HomePage(),
     const ShopPage(),
-    const WishListPage(),
+    const WishlistPage(),
     const ProfilePage(),
   ];
 

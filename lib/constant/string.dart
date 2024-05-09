@@ -76,8 +76,40 @@ const String kFilterText = "Filter";
 const String kCategoriesText = "Categories";
 const String kNewArrivalText = "New Arrivals";
 const String kViewAllText = "View All";
+const kAppSettingText = "App Setting";
+
+/// profile page texts
+const kAccountSettingText = "Account Setting";
+const kCategoryText1 = "My Address";
+const kCategoryText2 = "My Cart";
+const kCategoryText3 = "My Orders";
+const kCategoryText4 = "Bank Account";
+const kCategoryText5 = "My Coupons";
+const kCategoryText6 = "Notifications";
+const kCategoryText7 = "Account Privacy";
+const kSubcategoryText1 = "Set shopping delivery address";
+const kSubcategoryText2 = "Add or remove products and move to checkout";
+const kSubcategoryText3 = "In-progress and Completed Orders";
+const kSubcategoryText4 = "Withdraw balance to registered Bank Account";
+const kSubcategoryText5 = "List of all th e discounted coupons";
+const kSubcategoryText6 = "Set any kinds of notification message";
+const kSubcategoryText7 = "Manage data usage and connected accounts";
+
+///drawer session texts
+const kLoadDataText = "Load Data";
+const kGeolocationText = "Geolocation";
+const kSafeModeText = "Safe Mode";
+const kHDImageQualityText = "HD Image Quality";
+
+
+///brands text
+const kGucciText = "Gucci";
+const kJordanText = "Jordan";
+const kNikeText = "Nike";
+const kAdidasText = "Adidas";
 
 /// store page texts
 const kStoreText = "Store";
 const kSearchInStoreText = "Search in Store";
 const kBrandsText = "Popular Brands";
+const kYouMayLikeText = "You May Like";

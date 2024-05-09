@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:k_shop/utils/helper/extension.dart';
-import 'package:k_shop/utils/views/screens/login_screen.dart';
+
+import '../utils/ui/views/screens/login_screen.dart';
 
 class OnBoardingProvider extends ChangeNotifier {
   bool _isDispose = false;
